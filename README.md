@@ -10,7 +10,7 @@ Code for SAFMN
 | | x3 | 232.69 | 23.42 | 134.00| [Google]()/[Baidu]() Drive |  |
 | | x4 | 239.52 | 13.56 | 76.70 | [Google]()/[Baidu]() Drive |  |
 | | x4 (Large) | 5600.82 | 321.00 | 521.00 | [Google]()/[Baidu]() Drive |  |
-| [Real Degradation](https://github.com/xinntao/Real-ESRGAN) | x4 (Large)| 5600.82 | 321.00 | 521.00 | [Google]()/[Baidu]() Drive |  |
+| [High-order](https://github.com/xinntao/Real-ESRGAN) | x4 (Large)| 5600.82 | 321.00 | 521.00 | [Google]()/[Baidu]() Drive |  |
 
 - Runtime comparison (1080P --> 4K)
 
