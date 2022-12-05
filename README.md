@@ -6,11 +6,11 @@ Code for SAFMN
 
 | Degradation | Scale | Params [K] | FLOPs [G] | Acts. [M] | Model Zoo| Visual Results| 
 | :----- | :-----: | :-----: | :-----: |:-----: |:-----: |:-----: |
-| BI | x2 | 227.82 | 51.53 | 299.00| [Google Drive]() | [Google Drive]() |
-| | x3 | 232.69 | 23.42 | 134.00| [Google Drive]() |  |
-| | x4 | 239.52 | 13.56 | 76.70 | [Google Drive]() |  |
-| | x4 (Large) | 5600.82 | 321.00 | 521.00 | [Google Drive]() |  |
-| [Real-world Degradation](https://github.com/xinntao/Real-ESRGAN) | x4 (Large)| 5600.82 | 321.00 | 521.00 | [Google Drive]() |  |
+| BI | x2 | 227.82 | 51.53 | 299.00| [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
+| | x3 | 232.69 | 23.42 | 134.00| [Google]()/[Baidu]() Drive |  |
+| | x4 | 239.52 | 13.56 | 76.70 | [Google]()/[Baidu]() Drive |  |
+| | x4 (Large) | 5600.82 | 321.00 | 521.00 | [Google]()/[Baidu]() Drive |  |
+| [Real-world Degradation](https://github.com/xinntao/Real-ESRGAN) | x4 (Large)| 5600.82 | 321.00 | 521.00 | [Google]()/[Baidu]() Drive |  |
 
 - Runtime comparison (1080P --> 4K)
 
