@@ -10,7 +10,7 @@ Code for SAFMN
 | | x3 | 232.69 | 23.42 | 134.00| [Google Drive]() |  |
 |  | x4 | 239.52 | 13.56 | 76.70 | [Google Drive]() |  |
 | | x4_Large | 5600.82 | 321 | 521 | [Google Drive]() |  |
-| [second-order degradation](https://github.com/xinntao/Real-ESRGAN) | x4_Large | 5600.82 | 321 | 521 | [Google Drive]() |  |
+| [Second-order Degradation](https://github.com/xinntao/Real-ESRGAN) | x4_Large | 5600.82 | 321 | 521 | [Google Drive]() |  |
 
 - Runtime comparison (1080P --> 4K)
 
