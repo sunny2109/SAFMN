@@ -1,5 +1,5 @@
 # SAFMN
-Code for SAFMN
+Code for "Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolution"
 
 ### Quantitative results 
   - Benchmark results 
