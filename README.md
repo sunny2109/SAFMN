@@ -4,13 +4,15 @@ Code for "Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolu
 ### Quantitative results 
   - Benchmark results 
 
-| Degradation | Scale | Params [K] | FLOPs [G] | Acts. [M] | Model Zoo| Visual Results| 
+| Degradation | Scale | Params | FLOPs | Acts. | Model Zoo| Visual Results| 
 | :----- | :-----: | :-----: | :-----: |:-----: |:-----: |:-----: |
-| BI | x2 | 227.82 | 51.53 | 299.00| [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
-| BI | x3 | 232.69 | 23.42 | 134.00| [Google]()/[Baidu]() Drive |  |
-| BI | x4 | 239.52 | 13.56 | 76.70 | [Google]()/[Baidu]() Drive |  |
-| BI | x4 (Large) | 5600.82 | 321.00 | 521.00 | [Google]()/[Baidu]() Drive |  |
-| [High-order](https://github.com/xinntao/Real-ESRGAN) | x4 (Large)| 5600.82 | 321.00 | 521.00 | [Google]()/[Baidu]() Drive |  |
+| BI | x2 | 227.82[K] | 51.53[G] | 299.00[M]| [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
+| BI | x3 | 232.69[K] | 23.42[G] | 134.00[M]|  |  |
+| BI | x4 | 239.52[K] | 13.56[G] | 76.70[M] |  |  |
+| BI | x2 (Large)| 5.56[M] | 1,274.00[G] | 2,076.00[M]| [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
+| BI | x3 (Large)| 5.58[M] | 364.00[G] | 592.00[M]|  |  |
+| BI | x4 (Large)| 5.60[M] | 321.00[G] | 521.00[M] |  |  |
+| [High-order](https://github.com/xinntao/Real-ESRGAN) | x4 (Large)| 5.60[M] | 321.00[G] | 521.00[M] | [Google]()/[Baidu]() Drive |  |
 
 - Runtime comparison (1080P --> 4K)
 
