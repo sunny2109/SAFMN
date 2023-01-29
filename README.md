@@ -5,7 +5,7 @@ Code for "Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolu
   - Benchmark results 
 
 | Degradation | Scale | Model Zoo| Visual Results| 
-| :----- | :-----: | :-----: | :-----: |:-----: |:-----: |:-----: |
+| :----- | :-----: |:-----: |:-----: |
 | BI | x2 | [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
 | BI | x3 | [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
 | BI | x4 | [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
@@ -13,8 +13,11 @@ Code for "Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolu
 | BI | x3 (Large)| [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
 | BI | x4 (Large)| [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
 | [High-order](https://github.com/xinntao/Real-ESRGAN) | x4 (Large)| [Google]()/[Baidu]() Drive |  |
+
 <img src="./figs/Efficient_SR.png"/> 
+
 <img src="./figs/Classic_SR.png"/> 
+
 
 - Runtime comparison (1080P --> 4K)
 
