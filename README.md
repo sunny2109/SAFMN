@@ -14,6 +14,8 @@ Code for "Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolu
 | BI | x4 (Large)| 5.60[M] | 321.00[G] | 521.00[M] |  |  |
 | [High-order](https://github.com/xinntao/Real-ESRGAN) | x4 (Large)| 5.60[M] | 321.00[G] | 521.00[M] | [Google]()/[Baidu]() Drive |  |
 
+<img src="./figs/classi_SR.png"/> 
+
 - Runtime comparison (1080P --> 4K)
 
 | Method | Params [K] | FLOPs [G] | GPU Mem. [M] | Running Time [s]|
