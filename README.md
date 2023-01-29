@@ -16,7 +16,7 @@ Code for "Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolu
 
 <img src="./figs/Efficient_SR.png"/> 
 
-<img src="./figs/Classic_SR.png"/> 
+<img src="./figs/classic_SR.png"/> 
 
 
 - Runtime comparison (1080P --> 4K)
