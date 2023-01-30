@@ -4,15 +4,11 @@ Code for "Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolu
 ### Quantitative results 
   - Benchmark results 
 
-| Degradation | Scale | Model Zoo| Visual Results| 
+| Degradation | Model Zoo| Visual Results| 
 | :----- | :-----: |:-----: |:-----: |
-| BI | x2 | [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
-| BI | x3 | [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
-| BI | x4 | [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
-| BI | x2 (Large)| [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
-| BI | x3 (Large)| [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
-| BI | x4 (Large)| [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
-| [High-order](https://github.com/xinntao/Real-ESRGAN) | x4 (Large)| [Google]()/[Baidu]() Drive |  |
+| BI |[Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
+| BI (Large)| [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
+| [High-order](https://github.com/xinntao/Real-ESRGAN) (x4 Large)|[Google]()/[Baidu]() Drive |  |
 
 <img src="./figs/Efficient_SR.png"/> 
 
