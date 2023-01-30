@@ -5,7 +5,7 @@ Code for "Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolu
   - Benchmark results 
 
 | Degradation | Model Zoo| Visual Results| 
-| :----- | :-----: |:-----: |:-----: |
+| :----- |:-----: |:-----: |
 | BI |[Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
 | BI (Large)| [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
 | [High-order](https://github.com/xinntao/Real-ESRGAN) (x4 Large)|[Google]()/[Baidu]() Drive |  |
