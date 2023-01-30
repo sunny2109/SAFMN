@@ -6,9 +6,9 @@ Code for "Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolu
 
 | Degradation | Model Zoo| Visual Results| 
 | :----- |:-----: |:-----: |
-| BI |[Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
-| BI (Large)| [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
-| [High-order](https://github.com/xinntao/Real-ESRGAN) (x4 Large)|[Google]()/[Baidu]() Drive |  |
+| BI | Efficient SR: [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
+| BI | Classic SR: [Google]()/[Baidu]() Drive | [Google]()/[Baidu]() Drive |
+| x4 [High-order](https://github.com/xinntao/Real-ESRGAN) |[Google]()/[Baidu]() Drive |  |
 
 <img src="./figs/Efficient_SR.png"/> 
 
