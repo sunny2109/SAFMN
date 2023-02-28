@@ -18,8 +18,8 @@
 ### Requirements
 > - Python 3.8, PyTorch == 1.11
 > - BasicSR 1.4.2
-> - einops pip install einops
-> - fvcore pip install -U fvcore
+> - einops: pip install einops
+> - fvcore: pip install -U fvcore
 > - Platforms: Ubuntu 18.04, cuda-11.
 
 ### Training
