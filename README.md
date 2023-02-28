@@ -15,11 +15,34 @@
 *An overview of the proposed SAFMN. SAFMN first transforms the input LR image into the feature space using a convolutional layer, performs feature extraction using a series of feature mixing modules (FMMs), and then reconstructs these extracted features by an upsampler module. The FMM block is mainly implemented by a spatially-adaptive feature modulation (SAFM) layer and a convolutional channel mixer (CCM).*
 
 
+### Requirements
+> - Python 3.8, PyTorch == 1.11
+> - BasicSR 1.4.2
+> - einops pip install einops
+> - fvcore pip install -U fvcore
+> - Platforms: Ubuntu 18.04, cuda-11.
+
 ### Training
-
-
+Run the following commands for training:
+```
+# train SAFMN for x4 effieicnt SR
+python basicsr/train.py -opt options/train/SAFMN/train_DF2K_x4.yml
+# train SAFMN for x4 classic SR
+python basicsr/train.py -opt options/train/SAFMN/train_L_DF2K_x4.yml
+```
 ### Testing 
-
+- Download the pretrained models.
+- Download the testing dataset.
+- Run the following commands:
+```
+# test SAFMN for x4 efficient SR
+python basicsr/test.py -opt options/test/SAFMN/test_benchmark_x4.yml
+# test SAFMN for x4 classic SR
+python basicsr/test.py -opt options/test/SAFMN/test_benchmark_x4.yml
+# test SAFMN for x4 real-world SR (without ground-truth)
+python basicsr/test.py -opt options/test/SAFMN/test_real_x4.yml
+```
+- The test results will be in './results'.
 
 ### Results
 - **Pretrained models and visual results**
