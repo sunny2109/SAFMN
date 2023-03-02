@@ -68,13 +68,14 @@ python basicsr/test.py -opt options/test/SAFMN/test_real_x4.yml
 
 ### Citation
 If this work is helpful for your research, please consider citing the following BibTeX entry.
-
+```
 @article{sun2023safmn,
     title={Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolution},
     author={Sun, Long and Dong, Jiangxin and Tang, Jinhui and Pan, Jinshan},
     journal={arXiv preprint arXiv:2302.13800},
     year={2023}
  }
+ ```
 
 
 ### Acknowledgement
