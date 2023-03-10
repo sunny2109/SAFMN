@@ -59,6 +59,15 @@ python basicsr/test.py -opt options/test/SAFMN/test_real_x4.yml
 - **Classic SR Results**
 <img src="./figs/classic_sr.png">
 
+- **Real-world SR Results**
+|Real-World Image (x4)|Real-ESRGAN  |SwinIR     | SAFMN (ours)|
+|       :---          |     :---:   |  :-----:  |  :-----:    |        
+| <img width="250" src="figs/real_figs/five_golden_flowers_02.png">|<img width="250" src="figs/real_figs/five_golden_flowers_02_realESRGAN.png">|<img width="250" src="figs/real_figs/five_golden_flowers_02_SwinIR.png">|<img width="250" src="figs/real_figs/five_golden_flowers_02_SAFMN.png">
+| <img width="250" src="figs/real_figs/five_golden_flowers_01.png">|<img width="250" src="figs/real_figs/five_golden_flowers_01_realESRGAN.png">|<img width="250" src="figs/real_figs/five_golden_flowers_01_SwinIR.png">|<img width="250" src="figs/real_figs/five_golden_flowers_01_SAFMN.png">
+| <img width="250" src="figs/real_figs/kobe_curry.png">|<img width="250" src="figs/real_figs/kobe_curry_realESRGAN.png">|<img width="250" src="figs/real_figs/kobe_curry_SwinIR.png">|<img width="250" src="figs/real_figs/kobe_curry_SAFMN.png">
+| <img width="250" src="figs/real_figs/little_carp.png">|<img width="250" src="figs/real_figs/little_carp_realESRGAN.png">|<img width="250" src="figs/real_figs/little_carp_SwinIR.png">|<img width="250" src="figs/real_figs/little_carp_SAFMN.png">
+
+
 - **Runtime Comparison**
 <img src="./figs/runtime.png">
 
