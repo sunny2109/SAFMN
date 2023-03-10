@@ -18,8 +18,8 @@
 ### Requirements
 > - Python 3.8, PyTorch == 1.11
 > - BasicSR 1.4.2
-> - einops pip install einops
-> - fvcore pip install -U fvcore
+> - einops: pip install einops
+> - fvcore: pip install -U fvcore
 > - Platforms: Ubuntu 18.04, cuda-11.
 
 ### Training
@@ -76,12 +76,15 @@ python basicsr/test.py -opt options/test/SAFMN/test_real_x4.yml
 
 
 ### Citation
-    @article{sun2023safmn,
-      title={Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolution},
-      author={Sun, Long and Dong, Jiangxin and Tang, Jinhui and Pan, Jinshan},
-      journal={arXiv preprint arXiv:2302.13800},
-      year={2023}
-    }
+If this work is helpful for your research, please consider citing the following BibTeX entry.
+```
+@article{sun2023safmn,
+    title={Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolution},
+    author={Sun, Long and Dong, Jiangxin and Tang, Jinhui and Pan, Jinshan},
+    journal={arXiv preprint arXiv:2302.13800},
+    year={2023}
+ }
+ ```
 
 
 ### Acknowledgement
