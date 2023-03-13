@@ -40,7 +40,7 @@ python basicsr/test.py -opt options/test/SAFMN/test_benchmark_x4.yml
 # test SAFMN for x4 classic SR
 python basicsr/test.py -opt options/test/SAFMN/test_L_benchmark_x4.yml
 # test SAFMN for x4 real-world SR (without ground-truth)
-python basicsr/test.py -opt options/test/SAFMN/test_real_x4.yml
+python basicsr/test.py -opt options/test/SAFMN/test_real_img_x4.yml
 ```
 - The test results will be in './results'.
 
