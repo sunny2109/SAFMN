@@ -14,6 +14,9 @@
 
 *An overview of the proposed SAFMN. SAFMN first transforms the input LR image into the feature space using a convolutional layer, performs feature extraction using a series of feature mixing modules (FMMs), and then reconstructs these extracted features by an upsampler module. The FMM block is mainly implemented by a spatially-adaptive feature modulation (SAFM) layer and a convolutional channel mixer (CCM).*
 
+### News
+- [2023-03-13] The source codes, checkpoints and visual results are available.
+- [2023-02-26] The paper is available [here](https://arxiv.org/pdf/2302.13800.pdf)
 
 ### Requirements
 > - Python 3.8, PyTorch == 1.11
