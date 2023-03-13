@@ -1,0 +1,89 @@
+name: SAFMN_c36n8_x4
+model_type: SRModel
+scale: 4
+num_gpu: 1  # set num_gpu: 0 for cpu mode
+manual_seed: 0
+
+datasets:
+  test_1:  # the 1st test dataset
+    name: Set5
+    type: PairedImageDataset
+    dataroot_gt: datasets/Benchmarks/Set5/HR
+    dataroot_lq: datasets/Benchmarks/Set5/LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+
+  test_2:  # the 2nd test dataset
+    name: Set14
+    type: PairedImageDataset
+    dataroot_gt: datasets/Benchmarks/Set14/HR
+    dataroot_lq: datasets/Benchmarks/Set14/LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+
+  test_3:  # the 1st test dataset
+    name: B100
+    type: PairedImageDataset
+    dataroot_gt: datasets/Benchmarks/B100/HR
+    dataroot_lq: datasets/Benchmarks/B100/LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+
+  test_4:  # the 2nd test dataset
+    name: Urban100
+    type: PairedImageDataset
+    dataroot_gt: datasets/Benchmarks/Urban100/HR
+    dataroot_lq: datasets/Benchmarks/Urban100/LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+
+  test_5:  # the 1st test dataset
+    name: Manga109
+    type: PairedImageDataset
+    dataroot_gt: datasets/Benchmarks/Manga109/HR
+    dataroot_lq: datasets/Benchmarks/Manga109/LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+  
+  test_6:
+    name: DIV2K_val100
+    type: PairedImageDataset
+    dataroot_gt: datasets/DIV2K/DIV2K_Valid/HR
+    dataroot_lq: datasets/DIV2K/DIV2K_Valid/LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: SAFMN
+  dim: 36
+  n_blocks: 8
+  ffn_scale: 2.0
+  upscaling_factor: 4
+
+
+# path
+path:
+  pretrain_network_g: experiments/pretrained_model/SAFMN_DF2K_x4.pth
+  strict_load_g: true
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: true
+    ssim:
+      type: calculate_ssim
+      crop_border: 4
+      test_y_channel: true
