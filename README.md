@@ -15,7 +15,7 @@
 *An overview of the proposed SAFMN. SAFMN first transforms the input LR image into the feature space using a convolutional layer, performs feature extraction using a series of feature mixing modules (FMMs), and then reconstructs these extracted features by an upsampler module. The FMM block is mainly implemented by a spatially-adaptive feature modulation (SAFM) layer and a convolutional channel mixer (CCM).*
 
 ### News
-- [2023-03-22] The code and checkpoint for NTIRE 2023 Efficient Super-Resolution Challenge is available [here]().
+- [2023-03-22] The code and checkpoint for NTIRE 2023 Efficient Super-Resolution Challenge is available [here](https://github.com/sunny2109/SAFMN/tree/main/NTIRE2023_ESR).
 - [2023-03-22] The pre-trained model with high-order degradation on the LSDIR dataset is available.
 - [2023-03-13] The source codes, checkpoints and visual results are available.
 - [2023-02-26] The paper is available [here](https://arxiv.org/pdf/2302.13800.pdf)
