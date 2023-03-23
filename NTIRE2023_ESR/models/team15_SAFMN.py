@@ -4,13 +4,6 @@ import torch.nn.functional as F
 from einops import rearrange
 # from basicsr.utils.registry import ARCH_REGISTRY
 
-
-#######################################
-# 1. 减少attn block中的skip-connection
-# 2. 将LN替换为GRN
-# 3. 将CMM中的3*3 Conv和1*1 Conv交换位置
-
-
 # Layer Norm
 class LayerNorm(nn.Module):
     def __init__(self, normalized_shape, eps=1e-6, data_format="channels_first"):
@@ -159,20 +152,6 @@ if __name__== '__main__':
     output = model(x)
     print(output.shape)
 
-    # model.eval()
-    # model.to(device)
-
-    # # Warn-up
-    # for _ in range(5):
-    #     start = time.time()
-    #     outputs = model(x)
-    #     torch.cuda.synchronize()
-    #     end = time.time()
-    #     print('Time:{}ms'.format((end-start)*1000))
-
-    # with torch.autograd.profiler.profile(enabled=True, use_cuda=True, record_shapes=False, profile_memory=False) as prof:
-    #     outputs = model(x)
-    # print(prof.table())
 
 
 
