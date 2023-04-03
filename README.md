@@ -25,10 +25,10 @@
 ---
 ### Requirements
 > - Python 3.8, PyTorch >= 1.11
-> - BasicSR 1.4.2
+> - BasicSR 1.4.2, follow this [guide](https://github.com/XPixelGroup/BasicSR/blob/master/docs/INSTALL.md) to install BASICSR
 > - einops: pip install einops
 > - fvcore: pip install -U fvcore
-> - Platforms: Ubuntu 18.04, cuda-11.
+> - Platforms: Ubuntu 18.04, cuda-11
 
 ### Training
 Run the following commands for training:
