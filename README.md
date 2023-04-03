@@ -30,11 +30,15 @@
 
 ### Installation
 ```
+# Clone the repo
 git clone https://github.com/sunny2109/SAFMN.git
+# Install dependent packages
 cd SAFMN
 pip install -r requirements.txt
+# Install BasicSR
 python setup.py develop
 ```
+You can also refer to this [INSTALL.md](https://github.com/XPixelGroup/BasicSR/blob/master/docs/INSTALL.md) for installation
 
 ### Training
 Run the following commands for training:
