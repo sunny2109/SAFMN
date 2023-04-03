@@ -16,7 +16,8 @@
 
 ---
 ### News
-- [2023-03-22] The code and checkpoint for the NTIRE 2023 Efficient Super-Resolution Challenge is available [here](https://github.com/sunny2109/SAFMN/tree/main/NTIRE2023_ESR).
+- [2023-04-03] The SAFMN variant ranks Top3 for model complexity in the NTIRE2023 ESR Challenge.
+- [2023-03-22] The code and checkpoint for the NTIRE2023 Efficient Super-Resolution Challenge is available [here](https://github.com/sunny2109/SAFMN/tree/main/NTIRE2023_ESR).
 - [2023-03-22] The pre-trained model with high-order degradation on the LSDIR dataset is available.
 - [2023-03-13] The source codes, checkpoints and visual results are available.
 - [2023-02-26] The paper is available [here](https://arxiv.org/pdf/2302.13800.pdf).
