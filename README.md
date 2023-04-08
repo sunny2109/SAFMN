@@ -78,10 +78,8 @@ python basicsr/test.py -opt options/test/SAFMN/test_real_img_x4.yml
 <img src="./figs/classic_sr.png">
 
 - **Real-world SR Results**
-<video id="video" controls="" preload="none" poster="封面">
-      <source id="mp4" src="https://github.com/sunny2109/SAFMN/blob/main/figs/demo.mp4" type="video/mp4">
-</videos>
-
+- 
+https://github.com/sunny2109/SAFMN/blob/main/figs/demo.mp4
 
 |Real-World Image (x4)|Real-ESRGAN  |SwinIR     | SAFMN (ours)|
 |       :---          |     :---:   |  :-----:  |  :-----:    |        
