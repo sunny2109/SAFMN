@@ -22,6 +22,12 @@ def select_model(args, device):
         model_path = os.path.join('model_zoo', 'team00_rfdn.pth')
         model = RFDN()
         model.load_state_dict(torch.load(model_path), strict=True)
+    elif model_id == 14:
+        from models.team14_GFMN import GFMN
+        name, data_range = f"{model_id:16}_GFMN", 1.0
+        model_path = os.path.join('model_zoo', 'team14_GFMN.pth')
+        model = GFMN(dim=36, n_blocks=8, ffn_scale=2, upscaling_factor=4)
+        model.load_state_dict(torch.load(model_path)['params'], strict=True)
     elif model_id == 15:
         from models.team15_SAFMN import SAFMN
         name, data_range = f"{model_id:16}_SAFMN", 1.0
