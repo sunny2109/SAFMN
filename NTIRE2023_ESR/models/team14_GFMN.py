@@ -80,31 +80,6 @@ class FeedForward(nn.Module):
         x = self.project_out(x)
         return x
 
-class ShiftConv2d(nn.Module):
-    def __init__(self, inp_channels, out_channels):
-        super(ShiftConv2d, self).__init__()
-        self.inp_channels = inp_channels
-        self.out_channels = out_channels
-
-        # weight-filter of shape(out_channel,in_channels/groups,kernel_H,kernel_W)
-        self.weight = nn.Parameter(torch.zeros(
-            inp_channels, 1, 3, 3), requires_grad=False)
-        self.n_div = 5
-        g = inp_channels // self.n_div
-        self.weight[0 * g:1 * g, 0, 1, 2] = 1.0  # left
-        self.weight[1 * g:2 * g, 0, 1, 0] = 1.0  # right
-        self.weight[2 * g:3 * g, 0, 2, 1] = 1.0  # up
-        self.weight[3 * g:4 * g, 0, 0, 1] = 1.0  # down
-        self.weight[4 * g:, 0, 1, 1] = 1.0  # identity
-
-        self.conv1x1 = nn.Conv2d(inp_channels, out_channels, 1)
-
-    def forward(self, x):
-        y = F.conv2d(input=x, weight=self.weight, bias=None,
-                     stride=1, padding=1, groups=self.inp_channels)
-        y = self.conv1x1(y)
-        return y
-
 # Spatially-Adaptive Feature Modulation
 class SAFM(nn.Module):
     def __init__(self, dim, n_levels=4):
@@ -141,22 +116,6 @@ class SAFM(nn.Module):
         out = self.act(out) * x
         return out
 
-class LKA(nn.Module):
-    def __init__(self, dim):
-        super().__init__()
-        self.conv0 = nn.Conv2d(dim, dim, 5, padding=2, groups=dim)
-        self.conv_spatial = nn.Conv2d(dim, dim, 7, stride=1, padding=9, groups=dim, dilation=3)
-        self.conv1 = nn.Conv2d(dim, dim, 1)
-
-
-    def forward(self, x):
-        u = x.clone()
-        attn = self.conv0(x)
-        attn = self.conv_spatial(attn)
-        attn = self.conv1(attn)
-
-        return u * attn
-
 
 class AttBlock(nn.Module):
     def __init__(self, dim, ffn_scale=2.0):
@@ -165,7 +124,7 @@ class AttBlock(nn.Module):
         self.norm1 = LayerNorm(dim) #GRN(dim)
         self.norm2 = LayerNorm(dim) #GRN(dim)
 
-        self.safm = SAFM(dim) # #LKA(dim) #SAFM_scale(dim) #
+        self.safm = SAFM(dim) 
         self.ffd = FeedForward(dim, ffn_scale)
 
     def forward(self, x):
@@ -211,21 +170,6 @@ if __name__== '__main__':
     print(flop_count_table(FlopCountAnalysis(model, x), activations=ActivationCountAnalysis(model, x)))
     output = model(x)
     print(output.shape)
-
-    # model.eval()
-    # model.to(device)
-
-    # # Warn-up
-    # for _ in range(5):
-    #     start = time.time()
-    #     outputs = model(x)
-    #     torch.cuda.synchronize()
-    #     end = time.time()
-    #     print('Time:{}ms'.format((end-start)*1000))
-
-    # with torch.autograd.profiler.profile(enabled=True, use_cuda=True, record_shapes=False, profile_memory=False) as prof:
-    #     outputs = model(x)
-    # print(prof.table())
 
 
 
