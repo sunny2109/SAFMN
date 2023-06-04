@@ -4,7 +4,10 @@
 [IMAG Lab](https://imag-njust.net/), Nanjing University of Science and Technology
 
 ---
-[![GitHub Stars](https://img.shields.io/github/stars/sunny2109/SAFMN?style=social)](https://github.com/sunny2109/SAFMN)  ![visitors](https://visitor-badge.glitch.me/badge?page_id=sunny2109/SAFMN)  [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/pdf/2302.13800.pdf)  ![update](https://badges.strrl.dev/updated/sunny2109/SAFMN)
+[![GitHub Stars](https://img.shields.io/github/stars/sunny2109/SAFMN?style=social)](https://github.com/sunny2109/SAFMN)
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=sunny2109/SAFMN)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/pdf/2302.13800.pdf)
+![update](https://badges.strrl.dev/updated/sunny2109/SAFMN)
 
 
 ---
