@@ -68,10 +68,11 @@ class MBConv(nn.Module):
         hidden_dim = int(dim * growth_rate)
 
         self.mbconv = nn.Sequential(
-            nn.Conv2d(dim, hidden_dim, 3, 1, 1),
+            nn.Conv2d(dim, hidden_dim, 1, 1, 0),
             nn.GELU(),
             nn.Conv2d(hidden_dim, hidden_dim, 3, 1, 1, groups=hidden_dim),
             nn.GELU(),
+            SqueezeExcitation(hidden_dim),
             nn.Conv2d(hidden_dim, dim, 1, 1, 0)
         )
 
