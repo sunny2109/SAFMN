@@ -19,6 +19,7 @@
 
 ---
 ### News
+- [2023-06-06] The report of NTIRE 2023 Challenge on Efficient Super-Resolution is available [here](https://openaccess.thecvf.com/content/CVPR2023W/NTIRE/papers/Li_NTIRE_2023_Challenge_on_Efficient_Super-Resolution_Methods_and_Results_CVPRW_2023_paper.pdf)
 - [2023-04-17] The SAFMN ranks Top6 for overall performance in the NTIRE2023 ESR challenge.
 - [2023-04-17] The SAFMN variant ranks Top3 for model complexity in the NTIRE2023 ESR Challenge.
 - [2023-03-22] The code and checkpoint for the NTIRE2023 Efficient Super-Resolution Challenge is available [here](https://github.com/sunny2109/SAFMN/tree/main/NTIRE2023_ESR).
