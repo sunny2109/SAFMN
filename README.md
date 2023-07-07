@@ -93,6 +93,7 @@ python inference/inference_real_safmn.py --input test_demo --output results/test
 | <img width="350" src="figs/real_figs/kobe_curry.png">|<img width="350" src="figs/real_figs/kobe_curry_realESRGAN.png">|<img width="350" src="figs/real_figs/kobe_curry_SwinIR.png">|<img width="350" src="figs/real_figs/kobe_curry_SAFMN.png">
 | <img width="350" src="figs/real_figs/little_carp.png">|<img width="350" src="figs/real_figs/little_carp_realESRGAN.png">|<img width="350" src="figs/real_figs/little_carp_SwinIR.png">|<img width="350" src="figs/real_figs/little_carp_SAFMN.png">
 
+[<img src="figs/real_figs/anime_results.png">](https://imgsli.com/MTkwMzE2/6/7) 
 
 - **Runtime Comparison**
 <img src="./figs/runtime.png">
