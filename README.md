@@ -19,7 +19,7 @@
 
 ---
 ### News
-- [2023-07-14] The has been accepted by ICCV2023
+- [2023-07-14] This paper will appear in ICCV 2023
 - [2023-06-06] The report of NTIRE 2023 Challenge on Efficient Super-Resolution is available [here](https://openaccess.thecvf.com/content/CVPR2023W/NTIRE/papers/Li_NTIRE_2023_Challenge_on_Efficient_Super-Resolution_Methods_and_Results_CVPRW_2023_paper.pdf)
 - [2023-04-17] The SAFMN ranks Top6 for overall performance in the NTIRE2023 ESR challenge.
 - [2023-04-17] The SAFMN variant ranks Top3 for model complexity in the NTIRE2023 ESR Challenge.
