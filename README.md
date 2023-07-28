@@ -106,10 +106,10 @@ python inference/inference_real_safmn.py --input test_demo --output results/test
 ### Citation
 If this work is helpful for your research, please consider citing the following BibTeX entry.
 ```
-@article{sun2023safmn,
+@inproceedings{sun2023safmn,
     title={Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolution},
     author={Sun, Long and Dong, Jiangxin and Tang, Jinhui and Pan, Jinshan},
-    journal={arXiv preprint arXiv:2302.13800},
+    booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
     year={2023}
  }
  ```
