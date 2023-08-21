@@ -62,14 +62,14 @@ def main():
         else:
             with torch.no_grad():
                 output = model(img)
-                print(f'Max Memery [M]: {torch.cuda.max_memory_allocated(torch.cuda.current_device())/1024**2}')
+                #print(f'Max Memery [M]: {torch.cuda.max_memory_allocated(torch.cuda.current_device())/1024**2}')
 
         # save image
         output = output.data.squeeze().float().cpu().clamp_(0, 1).numpy()
         if output.ndim == 3:
             output = np.transpose(output[[2, 1, 0], :, :], (1, 2, 0))
         output = (output * 255.0).round().astype(np.uint8)
-        cv2.imwrite(os.path.join(args.output, f'{imgname}_p512_SAFMN.png'), output)
+        cv2.imwrite(os.path.join(args.output, f'{imgname}_SAFMN.png'), output)
 
 
 def img2patch(lq, scale=4, crop_size=512):
