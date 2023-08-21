@@ -4,9 +4,10 @@
 [IMAG Lab](https://imag-njust.net/), Nanjing University of Science and Technology
 
 ---
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/pdf/2302.13800.pdf)
+[![Colab](https://img.shields.io/static/v1?label=Demo&message=Colab&color=orange)](https://colab.research.google.com/drive/19DdsNFeOYR8om8QCCi9WWzr_WkWTLHZd?usp=sharing)
 [![GitHub Stars](https://img.shields.io/github/stars/sunny2109/SAFMN?style=social)](https://github.com/sunny2109/SAFMN)
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=sunny2109/SAFMN)
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/pdf/2302.13800.pdf)
 ![update](https://badges.strrl.dev/updated/sunny2109/SAFMN)
 
 
@@ -19,6 +20,7 @@
 
 ---
 ### News
+- [2023-08-21] Colab demo for SAFMN on x4 real-world image SR is available [![Colab](https://img.shields.io/static/v1?label=Demo&message=Colab&color=orange)](https://colab.research.google.com/drive/19DdsNFeOYR8om8QCCi9WWzr_WkWTLHZd?usp=sharing)
 - [2023-07-14] This paper will appear in ICCV 2023
 - [2023-06-06] The report of NTIRE 2023 Challenge on Efficient Super-Resolution is available [here](https://openaccess.thecvf.com/content/CVPR2023W/NTIRE/papers/Li_NTIRE_2023_Challenge_on_Efficient_Super-Resolution_Methods_and_Results_CVPRW_2023_paper.pdf)
 - [2023-04-17] The SAFMN ranks Top6 for overall performance in the NTIRE2023 ESR challenge.
