@@ -6,12 +6,15 @@ import numpy as np
 import os
 import torch
 from torch.nn import functional as F
+from basicsr.utils.colorfix import wavelet_reconstruction
 from basicsr.archs.safmn_arch import SAFMN
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input', type=str, default='datasets/test_demo', help='input test image folder')
-    parser.add_argument('--output', type=str, default='results/SAFMN/test_demo', help='output folder')
+    parser.add_argument('--input', type=str, default='datasets/leifeng', help='input test image folder')
+    parser.add_argument('--output', type=str, default='results/SAFMN/leifeng_test', help='output folder')
+    parser.add_argument('--scale', type=int, default=4, help='upscaling factor')
+    parser.add_argument('--color_fix', action='store_true', help='use the wavlet color fix for color correction')
     parser.add_argument('--large_input', action='store_true', help='the input image with large resolution, we crop the input into sub-images for memory-efficient forward')
     parser.add_argument('--model_path', type=str, default='experiments/pretrain_model/SAFMN_L_Real_LSDIR_x4.pth')
     args = parser.parse_args()
@@ -21,7 +24,7 @@ def main():
     torch.cuda.empty_cache()
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     # set up model
-    model = SAFMN(dim=128, n_blocks=16, ffn_scale=2.0, upscaling_factor=4)
+    model = SAFMN(dim=128, n_blocks=16, ffn_scale=2.0, upscaling_factor=args.scale)
     model.load_state_dict(torch.load(args.model_path)['params'], strict=True)
 
     model.eval()
@@ -39,7 +42,7 @@ def main():
 
         # inference
         if args.large_input:
-            img, idx, size = img2patch(img)
+            img, idx, size = img2patch(img, scale=args.scale)
             
             with torch.no_grad():
                 n = len(img)
@@ -56,14 +59,17 @@ def main():
                     outs.append(pred.detach())
                     i = j
                 output = torch.cat(outs, dim=0)
-                print(f'Max Memery [M]: {torch.cuda.max_memory_allocated(torch.cuda.current_device())/1024**2}')
+                # print(f'Max Memery [M]: {torch.cuda.max_memory_allocated(torch.cuda.current_device())/1024**2}')
 
-            output = patch2img(output, idx, size)
+            output = patch2img(output, idx, size, scale=args.scale)
         else:
             with torch.no_grad():
                 output = model(img)
-                #print(f'Max Memery [M]: {torch.cuda.max_memory_allocated(torch.cuda.current_device())/1024**2}')
+                # print(f'Max Memery [M]: {torch.cuda.max_memory_allocated(torch.cuda.current_device())/1024**2}')
 
+        if args.color_fix:
+            img = F.interpolate(img, scale_factor=args.scale, mode='bilinear')
+            output = wavelet_reconstruction(output, img)
         # save image
         output = output.data.squeeze().float().cpu().clamp_(0, 1).numpy()
         if output.ndim == 3:
@@ -129,6 +135,7 @@ def patch2img(outs, idxes, sr_size, scale=4, crop_size=512):
         count_mt[0, 0, i: i + crop_size_h, j: j + crop_size_w] += 1.
 
     return (preds / count_mt).to(outs.device)
+
 
 
 if __name__ == '__main__':
