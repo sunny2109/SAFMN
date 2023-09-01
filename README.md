@@ -70,7 +70,7 @@ python basicsr/test.py -opt options/test/SAFMN/test_L_benchmark_x4.yml
 # test SAFMN for x4 real-world SR (without ground-truth)
 python basicsr/test.py -opt options/test/SAFMN/test_real_img_x4.yml
 # test SAFMN for x4 real-world SR (large input)
-python inference/inference_real_safmn.py --input test_demo --output results/test_demo --large_input 
+python inference/inference_real_safmn.py --input test_demo --output results/test_demo --scale 4 --large_input 
 ```
 - The test results will be in './results'.
 
