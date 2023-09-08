@@ -16,7 +16,7 @@ def main():
     parser.add_argument('--scale', type=int, default=4, help='upscaling factor')
     parser.add_argument('--color_fix', action='store_true', help='use the wavlet color fix for color correction')
     parser.add_argument('--large_input', action='store_true', help='the input image with large resolution, we crop the input into sub-images for memory-efficient forward')
-    parser.add_argument('--model_path', type=str, default='experiments/pretrain_model/SAFMN_L_Real_LSDIR_x4.pth')
+    parser.add_argument('--model_path', type=str, default='experiments/pretrained_models/SAFMN_L_Real_LSDIR_x4.pth')
     args = parser.parse_args()
 
     os.makedirs(args.output, exist_ok=True)
