@@ -110,7 +110,7 @@ os.makedirs(save_path, exist_ok=True)
 
 def inference(img, upscale, large_input_flag, color_fix):
 	model = set_safmn(upscale)
-	
+
 	img = cv2.imread(str(img), cv2.IMREAD_COLOR)
 	print(f'input size: {img.shape}')
 
@@ -193,8 +193,8 @@ demo = gr.Interface(
     inference, [
         gr.inputs.Image(type="filepath", label="Input"),
         gr.inputs.Number(default=2, label="Rescaling_Factor (up to 4)"),
-		gr.inputs.Checkbox(default=True, label="patch_wise test"),
-		gr.inputs.Checkbox(default=True, label="color_correction"),
+		gr.inputs.Checkbox(default=False, label="patch_wise test"),
+		gr.inputs.Checkbox(default=False, label="color_correction"),
     ], [
         gr.outputs.Image(type="numpy", label="Output"),
         gr.outputs.File(label="Download the output")
