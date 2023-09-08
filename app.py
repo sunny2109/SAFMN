@@ -109,6 +109,10 @@ def patch2img(outs, idxes, sr_size, scale=4, crop_size=512):
 
     return (preds / count_mt).to(outs.device)
 
+model = set_safmn()
+
+save_path = './results'
+os.makedirs(save_path, exist_ok=True)
 
 def inference(img, upscale, large_input_flag, color_fix):
 	img = cv2.imread(str(img), cv2.IMREAD_COLOR)
@@ -161,8 +165,6 @@ def inference(img, upscale, large_input_flag, color_fix):
 	output = (output * 255.0).round().astype(np.uint8)
 
 	# save restored img
-	save_path = './results'
-	os.makedirs(save_path, exist_ok=True)
 	cv2.imwrite(os.path.join(save_path, f'output_SAFMN.png'), output)
 
 	return output, save_path
