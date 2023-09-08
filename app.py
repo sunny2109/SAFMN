@@ -104,12 +104,13 @@ def patch2img(outs, idxes, sr_size, scale=4, crop_size=512):
 
     return (preds / count_mt).to(outs.device)
 
-model = set_safmn()
 
 save_path = './results'
 os.makedirs(save_path, exist_ok=True)
 
 def inference(img, upscale, large_input_flag, color_fix):
+	model = set_safmn(upscale)
+	
 	img = cv2.imread(str(img), cv2.IMREAD_COLOR)
 	print(f'input size: {img.shape}')
 
