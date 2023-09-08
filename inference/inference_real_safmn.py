@@ -6,17 +6,18 @@ import numpy as np
 import os
 import torch
 from torch.nn import functional as F
+from basicsr.utils.download_util import load_file_from_url
 from basicsr.utils.colorfix import wavelet_reconstruction
 from basicsr.archs.safmn_arch import SAFMN
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input', type=str, default='datasets/leifeng', help='input test image folder')
-    parser.add_argument('--output', type=str, default='results/SAFMN/leifeng_test', help='output folder')
-    parser.add_argument('--scale', type=int, default=4, help='upscaling factor')
+    parser.add_argument('--input', type=str, default='datasets/test', help='input test image folder')
+    parser.add_argument('--output', type=str, default='results/SAFMN/test_results', help='output folder')
+    parser.add_argument('--scale', type=int, default=2, help='upscaling factor')
     parser.add_argument('--color_fix', action='store_true', help='use the wavlet color fix for color correction')
     parser.add_argument('--large_input', action='store_true', help='the input image with large resolution, we crop the input into sub-images for memory-efficient forward')
-    parser.add_argument('--model_path', type=str, default='experiments/pretrained_models/SAFMN_L_Real_LSDIR_x4.pth')
+    parser.add_argument('--model_path', type=str, default='https://github.com/sunny2109/SAFMN/releases/download/v0.1.0/SAFMN_L_Real_LSDIR_x2.pth')
     args = parser.parse_args()
 
     os.makedirs(args.output, exist_ok=True)
@@ -25,6 +26,10 @@ def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     # set up model
     model = SAFMN(dim=128, n_blocks=16, ffn_scale=2.0, upscaling_factor=args.scale)
+
+    # if the model_path starts with https, it will first download models to the folder: realesrgan/weights
+    if args.model_path.startswith('https://'):
+        args.model_path = load_file_from_url(url=args.model_path, model_dir=os.path.join('experiments/pretrained_models'), progress=True, file_name=None)
     model.load_state_dict(torch.load(args.model_path)['params'], strict=True)
 
     model.eval()
