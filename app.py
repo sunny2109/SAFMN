@@ -16,11 +16,6 @@ from basicsr.utils.colorfix import wavelet_reconstruction
 from basicsr.archs.safmn_arch import SAFMN
 
 
-ckpt_dir = Path('./experiments/pretrained_models/')
-if not ckpt_dir.exists():
-	ckpt_dir.mkdir()
-
-
 pretrain_model_url = {
 	'safmn_x2': 'https://github.com/sunny2109/SAFMN/releases/download/v0.1.0/SAFMN_L_Real_LSDIR_x2.pth',
 	'safmn_x4': 'https://github.com/sunny2109/SAFMN/releases/download/v0.1.0/SAFMN_L_Real_LSDIR_x4-v2.pth',
