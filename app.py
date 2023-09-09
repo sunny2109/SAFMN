@@ -192,9 +192,9 @@ If our work is useful for your research, please consider citing:
 demo = gr.Interface(
     inference, [
         gr.inputs.Image(type="filepath", label="Input"),
-        gr.inputs.Number(default=2, label="Rescaling_Factor (up to 4)"),
-		gr.inputs.Checkbox(default=True, label="patch_wise test", info="Select it for memory-efficient inference."),
-        gr.inputs.Checkbox(default=True, label="color_correction", info="Apply color correction."),
+        gr.inputs.Number(default=2, label="Upscaling factor (up to 4)"),
+		gr.inputs.Checkbox(default=True, label="Patch_wise test"),
+        gr.inputs.Checkbox(default=True, label="Color correction"),
     ], [
         gr.outputs.Image(type="numpy", label="Output"),
         gr.outputs.File(label="Download the output")
