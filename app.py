@@ -126,6 +126,8 @@ def inference(image, upscale, large_input_flag, color_fix):
 
 	# inference
 	if large_input_flag:
+
+
 		patches, idx, size = img2patch(img, scale=upscale)
 		
 		with torch.no_grad():
@@ -146,8 +148,11 @@ def inference(image, upscale, large_input_flag, color_fix):
 
 		output = patch2img(output, idx, size, scale=upscale)
 	else:
-		with torch.no_grad():
-			output = model(img)
+		try:
+			with torch.no_grad():
+				output = model(img)
+		except RuntimeError as error:
+			print(f"Failed inference for SAFMN: {error}")
 
 	# color fix
 	if color_fix:
@@ -162,7 +167,7 @@ def inference(image, upscale, large_input_flag, color_fix):
 	# save restored img
 	save_path = f'results/out.png'
 	cv2.imwrite(save_path, output)
-	
+
 	output = cv2.cvtColor(output, cv2.COLOR_BGR2RGB)
 	return output, save_path
 
