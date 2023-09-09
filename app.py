@@ -113,7 +113,7 @@ def inference(image, upscale, large_input_flag, color_fix):
 		upscale = 4 
 	if 0 < upscale < 3:
 		upscale = 2
-		
+
 	model = set_safmn(upscale)
 
 	img = cv2.imread(str(image), cv2.IMREAD_COLOR)
@@ -126,8 +126,6 @@ def inference(image, upscale, large_input_flag, color_fix):
 
 	# inference
 	if large_input_flag:
-
-
 		patches, idx, size = img2patch(img, scale=upscale)
 		
 		with torch.no_grad():
