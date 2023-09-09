@@ -191,6 +191,8 @@ If our work is useful for your research, please consider citing:
     year={2023}
 }
 ```
+
+<center><img src='https://visitor-badge.laobi.icu/badge?page_id=sunny2109/SAFMN' alt='visitors'></center>
 """
 
 demo = gr.Interface(
