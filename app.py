@@ -162,7 +162,8 @@ def inference(image, upscale, large_input_flag, color_fix):
 	# save restored img
 	save_path = f'results/out.png'
 	cv2.imwrite(save_path, output)
-
+	
+	output = cv2.cvtColor(output, cv2.COLOR_BGR2RGB)
 	return output, save_path
 
 
