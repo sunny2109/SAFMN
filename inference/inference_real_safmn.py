@@ -47,10 +47,10 @@ def main():
 
         # inference
         if args.large_input:
-            img, idx, size = img2patch(img, scale=args.scale)
+            patches, idx, size = img2patch(img, scale=args.scale)
             
             with torch.no_grad():
-                n = len(img)
+                n = len(patches)
                 outs = []
                 m = 1
                 i = 0
@@ -58,7 +58,7 @@ def main():
                     j = i + m
                     if j >= n:
                         j = n
-                    pred = output = model(img[i:j])
+                    pred = output = model(patches[i:j])
                     if isinstance(pred, list):
                         pred = pred[-1]
                     outs.append(pred.detach())

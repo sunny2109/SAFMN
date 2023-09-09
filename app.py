@@ -107,14 +107,14 @@ def patch2img(outs, idxes, sr_size, scale=4, crop_size=512):
 
 os.makedirs('./results', exist_ok=True)
 
-def inference(img, upscale, large_input_flag, color_fix):
+def inference(image, upscale, large_input_flag, color_fix):
 	model = set_safmn(upscale)
 
-	img = cv2.imread(str(img), cv2.IMREAD_COLOR)
+	img = cv2.imread(str(image), cv2.IMREAD_COLOR)
 	print(f'input size: {img.shape}')
 
 	upscale = int(upscale) # convert type to int
-	if upscale > 4: # avoid memory exceeded due to too large upscale
+	if upscale > 4: 
 		upscale = 4 
 	if 0 < upscale < 3:
 		upscale = 2
@@ -126,10 +126,10 @@ def inference(img, upscale, large_input_flag, color_fix):
 
 	# inference
 	if large_input_flag:
-		img, idx, size = img2patch(img, scale=upscale)
+		patches, idx, size = img2patch(img, scale=upscale)
 		
 		with torch.no_grad():
-			n = len(img)
+			n = len(patches)
 			outs = []
 			m = 1
 			i = 0
@@ -137,7 +137,7 @@ def inference(img, upscale, large_input_flag, color_fix):
 				j = i + m
 				if j >= n:
 					j = n
-				pred = output = model(img[i:j])
+				pred = output = model(patches[i:j])
 				if isinstance(pred, list):
 					pred = pred[-1]
 				outs.append(pred.detach())
