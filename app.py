@@ -108,16 +108,16 @@ def patch2img(outs, idxes, sr_size, scale=4, crop_size=512):
 os.makedirs('./results', exist_ok=True)
 
 def inference(image, upscale, large_input_flag, color_fix):
-	model = set_safmn(upscale)
-
-	img = cv2.imread(str(image), cv2.IMREAD_COLOR)
-	print(f'input size: {img.shape}')
-
 	upscale = int(upscale) # convert type to int
 	if upscale > 4: 
 		upscale = 4 
 	if 0 < upscale < 3:
 		upscale = 2
+		
+	model = set_safmn(upscale)
+
+	img = cv2.imread(str(image), cv2.IMREAD_COLOR)
+	print(f'input size: {img.shape}')
 
 	# img2tensor
 	img = img.astype(np.float32) / 255.
