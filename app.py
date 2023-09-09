@@ -197,7 +197,7 @@ demo = gr.Interface(
     inference, [
         gr.inputs.Image(type="filepath", label="Input"),
         gr.inputs.Number(default=2, label="Upscaling factor (up to 4)"),
-		gr.inputs.Checkbox(default=False, label="Patch_wise test"),
+		gr.inputs.Checkbox(default=False, label="Memory-efficient inference"),
         gr.inputs.Checkbox(default=False, label="Color correction"),
     ], [
         gr.outputs.Image(type="numpy", label="Output"),
