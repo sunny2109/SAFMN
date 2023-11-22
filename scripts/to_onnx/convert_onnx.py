@@ -84,7 +84,7 @@ if __name__ == "__main__":
     pretrained_model = 'experiments/pretrained_models/SAFMN_L_Real_LSDIR_x2.pth'
     model.load_state_dict(torch.load(pretrained_model)['params'], strict=True)
 
-    ###################Convert to onnx #################
+    ###################Onnx export#################
     output_folder = 'scripts/convert' 
 
     convert_onnx(model, output_folder)
