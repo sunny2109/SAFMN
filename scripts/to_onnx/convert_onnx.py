@@ -63,7 +63,6 @@ def test_onnx(onnx_model, input_path, save_path):
 
         # BGR -> RGB, HWC -> CHW
         img = np.transpose(img[:, :, [2, 1, 0]], (2, 0, 1))
-        img = np.transpose(img, (2, 0, 1))
         img = np.expand_dims(img, 0)
         img = np.ascontiguousarray(img)
 
