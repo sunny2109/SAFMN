@@ -23,7 +23,7 @@ pretrain_model_url = {
 
 
 # download weights
-if not os.path.exists('./experiments/pretrained_models/SAFMN_L_Real_LSDIR_x2.pth'):
+if not os.path.exists('./experiments/pretrained_models/SAFMN_L_Real_LSDIR_x2-v2.pth'):
 	load_file_from_url(url=pretrain_model_url['safmn_x2'], model_dir='./experiments/pretrained_models/', progress=True, file_name=None)
 
 if not os.path.exists('./experiments/pretrained_models/SAFMN_L_Real_LSDIR_x4-v2.pth'):
