@@ -93,11 +93,11 @@ python inference/inference_real_safmn.py --input test_demo --output results/test
 | BI-Classic SR | [Google Drive](https://drive.google.com/drive/folders/12O_xgwfgc76DsYbiClYnl6ErCDrsi_S9?usp=share_link)/[Baidu Netdisk](https://pan.baidu.com/s/10jtlG-FYfB8KwYfWsQDOMA) with code: SAFM | [Google Drive](https://drive.google.com/drive/folders/1s3vJQXDACr799khLLs1ELWL-neljx5vL?usp=share_link)/[Baidu Netdisk](https://pan.baidu.com/s/1fYsZ67MNLpPs7OAS9Dn2-w) with code: SAFM |
 | x4 [Real-world](https://github.com/xinntao/Real-ESRGAN) |[Google Drive](https://drive.google.com/drive/folders/12O_xgwfgc76DsYbiClYnl6ErCDrsi_S9?usp=share_link)/[Baidu Netdisk](https://pan.baidu.com/s/10jtlG-FYfB8KwYfWsQDOMA) with code: SAFM |  |
 
-- **Efficient SR Results**
-<img width="800" src="./figs/efficient_sr.png">
+- **Results on [AIGC Image](https://github.com/lcysyzxdxc/AGIQA-3k-Database?tab=readme-ov-file)**
+[<img src="assets/visual_results/general1.png" height="223px"/>](https://imgsli.com/MjMwNDk2) [<img src="assets/visual_results/general2.png" height="223px"/>](https://imgsli.com/MjMwNDk3)
 
-- **Classic SR Results**
-<img width="800" src="./figs/classic_sr.png">
+[<img src="assets/visual_results/general1.png" height="223px"/>](https://imgsli.com/MjMwNTAw) [<img src="assets/visual_results/general2.png" height="223px"/>](https://imgsli.com/MjMwNTAz)
+
 
 - **Real-world SR Results**
 
@@ -110,6 +110,11 @@ python inference/inference_real_safmn.py --input test_demo --output results/test
 
 [<img src="figs/real_figs/anime_results.png">](https://imgsli.com/MTkwMzE2/6/7) 
 
+- **Efficient SR Results**
+<img width="800" src="./figs/efficient_sr.png">
+
+- **Classic SR Results**
+<img width="800" src="./figs/classic_sr.png">
 
 ### Citation
 If this work is helpful for your research, please consider citing the following BibTeX entry.
