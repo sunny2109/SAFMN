@@ -94,9 +94,10 @@ python inference/inference_real_safmn.py --input test_demo --output results/test
 | x4 [Real-world](https://github.com/xinntao/Real-ESRGAN) |[Google Drive](https://drive.google.com/drive/folders/12O_xgwfgc76DsYbiClYnl6ErCDrsi_S9?usp=share_link)/[Baidu Netdisk](https://pan.baidu.com/s/10jtlG-FYfB8KwYfWsQDOMA) with code: SAFM |  |
 
 - **Results on [AIGC Image](https://github.com/lcysyzxdxc/AGIQA-3k-Database?tab=readme-ov-file)**
-[<img src="assets/visual_results/general1.png" height="223px"/>](https://imgsli.com/MjMwNDk2) [<img src="assets/visual_results/general2.png" height="223px"/>](https://imgsli.com/MjMwNDk3)
 
-[<img src="assets/visual_results/general1.png" height="223px"/>](https://imgsli.com/MjMwNTAw) [<img src="assets/visual_results/general2.png" height="223px"/>](https://imgsli.com/MjMwNTAz)
+[<img src="figs/dalle.png" width="500"/>](https://imgsli.com/MjMwNDk2) [<img src="figs/midjourney.png" width="500"/>](https://imgsli.com/MjMwNDk3)
+
+[<img src="figs/sdxl.png" width="500"/>](https://imgsli.com/MjMwNTAw) [<img src="figs/stable_diffusion.png" width="500"/>](https://imgsli.com/MjMwNTAz)
 
 
 - **Real-world SR Results**
