@@ -95,9 +95,9 @@ python inference/inference_real_safmn.py --input test_demo --output results/test
 
 - **Results on [AIGC Image](https://github.com/lcysyzxdxc/AGIQA-3k-Database?tab=readme-ov-file)**
 
-[<img src="figs/dalle.png" width="500"/>](https://imgsli.com/MjMwNDk2) [<img src="figs/midjourney.png" width="500"/>](https://imgsli.com/MjMwNDk3)
+[<img src="figs/dalle.png" width="400"/>](https://imgsli.com/MjMwNDk2) [<img src="figs/midjourney.png" width="400"/>](https://imgsli.com/MjMwNDk3)
 
-[<img src="figs/sdxl.png" width="500"/>](https://imgsli.com/MjMwNTAz) [<img src="figs/stable_diffusion.png" width="500"/>](https://imgsli.com/MjMwNTAw)
+[<img src="figs/sdxl.png" width="400"/>](https://imgsli.com/MjMwNTAz) [<img src="figs/stable_diffusion.png" width="400"/>](https://imgsli.com/MjMwNTAw)
 
 
 - **Real-world SR Results**
