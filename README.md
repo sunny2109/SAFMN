@@ -94,6 +94,10 @@ python inference/inference_real_safmn.py --input test_demo --output results/test
 | BI-Classic SR | [Google Drive](https://drive.google.com/drive/folders/12O_xgwfgc76DsYbiClYnl6ErCDrsi_S9?usp=share_link)/[Baidu Netdisk](https://pan.baidu.com/s/10jtlG-FYfB8KwYfWsQDOMA) with code: SAFM | [Google Drive](https://drive.google.com/drive/folders/1s3vJQXDACr799khLLs1ELWL-neljx5vL?usp=share_link)/[Baidu Netdisk](https://pan.baidu.com/s/1fYsZ67MNLpPs7OAS9Dn2-w) with code: SAFM |
 | x4 [Real-world](https://github.com/xinntao/Real-ESRGAN) |[Google Drive](https://drive.google.com/drive/folders/12O_xgwfgc76DsYbiClYnl6ErCDrsi_S9?usp=share_link)/[Baidu Netdisk](https://pan.baidu.com/s/10jtlG-FYfB8KwYfWsQDOMA) with code: SAFM |  |
 
+- **Results on Blind Compressed Image**
+
+[<img src="figs/dalle.png" width="400"/>](https://imgsli.com/MjQ3Njgy) [<img src="figs/midjourney.png" width="400"/>](https://imgsli.com/MjQ3Njgz)
+
 - **Results on [AIGC Image](https://github.com/lcysyzxdxc/AGIQA-3k-Database?tab=readme-ov-file)**
 
 [<img src="figs/dalle.png" width="400"/>](https://imgsli.com/MjMwNDk2) [<img src="figs/midjourney.png" width="400"/>](https://imgsli.com/MjMwNDk3)
