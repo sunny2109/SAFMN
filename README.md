@@ -96,7 +96,7 @@ python inference/inference_real_safmn.py --input test_demo --output results/test
 
 - **Results on Blind Compressed Images**
 
-[<img src="figs/compression_1.png" width="400" height="400"/>](https://imgsli.com/MjQ3Njgy) [<img src="figs/compression_2.png" width="400" height="400"/>](https://imgsli.com/MjQ3Njg0)
+[<img src="figs/compression_1.png" width="400" height="320"/>](https://imgsli.com/MjQ3Njgy) [<img src="figs/compression_2.png" width="400" height="320"/>](https://imgsli.com/MjQ3Njg0)
 
 - **Results on [AIGC Image](https://github.com/lcysyzxdxc/AGIQA-3k-Database?tab=readme-ov-file)**
 
