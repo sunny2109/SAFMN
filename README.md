@@ -23,6 +23,7 @@
 
 ---
 ### News
+- [2024-03-16] Add [SAFMN_BCIE](https://github.com/sunny2109/SAFMN/releases/download/v0.1.1/SAFMN_BCIE.pth), which enhances the quality of JPEG images compressed with a large range of quality factors. The corresponding inference code can be found [here]().
 - [2023-11-22] The code for ONNX export is available [here](https://github.com/sunny2109/SAFMN/tree/main/scripts/to_onnx)
 - [2023-09-08] Integrated to :panda_face: [OpenXLab](https://openxlab.org.cn/apps). Try out online demo! [![OpenXLab](https://img.shields.io/badge/Demo-%F0%9F%90%BC%20OpenXLab-blue)](https://openxlab.org.cn/apps/detail/Melokyyy/SAFMN)
 - [2023-08-31] Update [SAFMN_Real_x4.pth](https://github.com/sunny2109/SAFMN/releases/download/v0.1.0/SAFMN_L_Real_LSDIR_x4-v2.pth)
