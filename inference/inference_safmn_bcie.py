@@ -80,7 +80,7 @@ def main():
         print(f'Processing......idx: {idx}, img: {imgname}, input_size: {img.size()}')
 
         # inference
-        if arge.self_ensemble:
+        if args.self_ensemble:
             output = test_selfensemble(img, model)
         else:
             with torch.no_grad():
