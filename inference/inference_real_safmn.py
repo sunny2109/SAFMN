@@ -12,8 +12,8 @@ from basicsr.archs.safmn_arch import SAFMN
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input', type=str, default='datasets/test', help='input test image folder')
-    parser.add_argument('--output', type=str, default='results/SAFMN/test_results', help='output folder')
+    parser.add_argument('--input', type=str, default='real_testdata', help='input test image folder')
+    parser.add_argument('--output', type=str, default='results/SAFMN/real_test_results', help='output folder')
     parser.add_argument('--scale', type=int, default=2, help='upscaling factor')
     parser.add_argument('--color_fix', action='store_true', help='use the wavlet color fix for color correction')
     parser.add_argument('--large_input', action='store_true', help='the input image with large resolution, we crop the input into sub-images for memory-efficient forward')
