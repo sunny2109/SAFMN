@@ -23,7 +23,7 @@
 
 ---
 ### News
-- [2024-05-06] The lightweight version of SAFMN++ won ***1st*** place in the fidelity track of [Real-Time 4K Super-Resolution of Compressed AVIF Images Challenge](https://codalab.lisn.upsaclay.fr/competitions/17699) challenge and was invited to give an ***oral*** presentation at the AIS2024 workshop.
+- [2024-05-06] The lightweight version of SAFMN++ won ***1st*** place in the fidelity track of [Real-Time 4K Super-Resolution of Compressed AVIF Images Challenge](https://codalab.lisn.upsaclay.fr/competitions/17699) and was invited to give an ***oral*** presentation at the AIS2024 workshop.
 - [2024-03-27] Add the improved ESR model [SAFMN++](https://github.com/sunny2109/SAFMN/tree/main/NTIRE2024_ESR), which ranks Top4 in the Overall Performance track and Runtime track of NTIRE2024 ESR challenge
 - [2024-03-16] Add [SAFMN_BCIE](https://github.com/sunny2109/SAFMN/releases/download/v0.1.1/SAFMN_BCIE.pth), which enhances the quality of JPEG images compressed with a large range of quality factors. The corresponding inference code can be found [here](https://github.com/sunny2109/SAFMN/blob/main/inference/inference_safmn_bcie.py).
 - [2023-11-22] The code for ONNX export is available [here](https://github.com/sunny2109/SAFMN/tree/main/scripts/to_onnx)
