@@ -23,7 +23,7 @@
 
 ---
 ### News
-- [2024-05-08] Add the [light_SAFMN++](https://github.com/sunny2109/SAFMN/tree/main/AIS2024-RTSR), which is the **1st** place winner of the fidelity track of the [Real-time 4K Super Resolution Challenge for compressed AVIF images](https://arxiv.org/pdf/2404.16484v1), and is invited to give an **oral** presentation at the [AIS2024](https://ai4streaming-workshop.github.io/) workshop. 
+- [2024-05-08] Add the [light_SAFMN++](https://github.com/sunny2109/SAFMN/tree/main/AIS2024-RTSR), which is the **1st** place winner of the fidelity track of the [Real-time 4K Super Resolution Challenge for compressed AVIF images](https://arxiv.org/pdf/2404.16484v1), and is invited to give an **[oral](https://drive.google.com/drive/folders/1N6Lts1n0czO_nwYww1LiGaVmwCf-OrAl?usp=sharing)** presentation at the [AIS2024](https://ai4streaming-workshop.github.io/) workshop. 
 - [2024-03-27] Add the improved ESR model [SAFMN++](https://github.com/sunny2109/SAFMN/tree/main/NTIRE2024_ESR), which ranks Top4 in the Overall Performance track and Runtime track of NTIRE2024 [ESR](https://arxiv.org/pdf/2404.10343v1) challenge
 - [2024-03-16] Add [SAFMN_BCIE](https://github.com/sunny2109/SAFMN/releases/download/v0.1.1/SAFMN_BCIE.pth), which enhances the quality of JPEG images compressed with a large range of quality factors. The corresponding inference code can be found [here](https://github.com/sunny2109/SAFMN/blob/main/inference/inference_safmn_bcie.py).
 - [2023-11-22] The code for ONNX export is available [here](https://github.com/sunny2109/SAFMN/tree/main/scripts/to_onnx)
