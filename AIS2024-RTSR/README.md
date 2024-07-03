@@ -17,4 +17,4 @@ python inference.py --input ./test_data \
                                --model_path ./pretrained_model/vpeg_s.pth
 ```
 
-- You can find the result images from ```results/SAFMN_BCIE``` folder.
+- You can find the result images from ```results/``` folder.
