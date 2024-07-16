@@ -1,6 +1,7 @@
 ### 📖 Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolution
 > <a href="https://colab.research.google.com/drive/19DdsNFeOYR8om8QCCi9WWzr_WkWTLHZd?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>
 [![OpenXLab](https://img.shields.io/badge/Demo-%F0%9F%90%BC%20OpenXLab-blue)](https://openxlab.org.cn/apps/detail/Melokyyy/SAFMN)
+[![Hugging Face Demo](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demos-blue)](https://huggingface.co/spaces/Meloo/SAFMN)
 [![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/Meloo/SAFMN/tree/main)
 [![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://www.bilibili.com/video/BV1Hc411Q7uD/?t=7000)
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=sunny2109/SAFMN)
@@ -23,11 +24,12 @@
 
 ---
 ### News
+- [2024-07-16] Add 🤗[HuggingFace](https://huggingface.co/spaces/Meloo/SAFMN) online demo! 
 - [2024-05-08] Add the [light_SAFMN++](https://github.com/sunny2109/SAFMN/tree/main/AIS2024-RTSR), which is the **1st** place winner of the fidelity track of the [Real-time 4K Super Resolution Challenge for compressed AVIF images](https://arxiv.org/pdf/2404.16484v1), and is invited to give an **[oral](https://drive.google.com/drive/folders/1N6Lts1n0czO_nwYww1LiGaVmwCf-OrAl?usp=sharing)** presentation at the [AIS2024](https://ai4streaming-workshop.github.io/) workshop. 
 - [2024-03-27] Add the improved ESR model [SAFMN++](https://github.com/sunny2109/SAFMN/tree/main/NTIRE2024_ESR), which ranks Top4 in the Overall Performance track and Runtime track of NTIRE2024 [ESR](https://arxiv.org/pdf/2404.10343v1) challenge
 - [2024-03-16] Add [SAFMN_BCIE](https://github.com/sunny2109/SAFMN/releases/download/v0.1.1/SAFMN_BCIE.pth), which enhances the quality of JPEG images compressed with a large range of quality factors. The corresponding inference code can be found [here](https://github.com/sunny2109/SAFMN/blob/main/inference/inference_safmn_bcie.py).
 - [2023-11-22] The code for ONNX export is available [here](https://github.com/sunny2109/SAFMN/tree/main/scripts/to_onnx)
-- [2023-09-08] Integrated to :panda_face: [OpenXLab](https://openxlab.org.cn/apps). Try out online demo! [![OpenXLab](https://img.shields.io/badge/Demo-%F0%9F%90%BC%20OpenXLab-blue)](https://openxlab.org.cn/apps/detail/Melokyyy/SAFMN)
+- [2023-09-08] Add :panda_face: [OpenXLab](https://openxlab.org.cn/apps/detail/Melokyyy/SAFMN) online demo!
 - [2023-08-31] Update [SAFMN_Real_x4.pth](https://github.com/sunny2109/SAFMN/releases/download/v0.1.0/SAFMN_L_Real_LSDIR_x4-v2.pth)
 - [2023-08-31] Add [SAFMN_Real_x2.pth](https://github.com/sunny2109/SAFMN/releases/download/v0.1.0/SAFMN_L_Real_LSDIR_x2.pth)
 - [2023-08-21] Colab demo for SAFMN on x4 real-world image SR is available <a href="https://colab.research.google.com/drive/19DdsNFeOYR8om8QCCi9WWzr_WkWTLHZd?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>
