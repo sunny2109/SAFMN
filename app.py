@@ -35,7 +35,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 def set_safmn(upscale):
 	model = SAFMN(dim=128, n_blocks=16, ffn_scale=2.0, upscaling_factor=upscale)
 	if upscale == 2:
-		model_path = './experiments/pretrained_models/SAFMN_L_Real_LSDIR_x2.pth'
+		model_path = './experiments/pretrained_models/SAFMN_L_Real_LSDIR_x2-v2.pth'
 	elif upscale == 4:
 		model_path = './experiments/pretrained_models/SAFMN_L_Real_LSDIR_x4-v2.pth'
 	else:
