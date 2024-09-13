@@ -7,6 +7,7 @@ from basicsr.models.srgan_model import SRGANModel
 from basicsr.utils import DiffJPEG, USMSharp
 from basicsr.utils.img_process_util import filter2D
 from basicsr.utils.registry import MODEL_REGISTRY
+from basicsr.losses.ldl_loss import get_refined_artifact_map
 from collections import OrderedDict
 from torch.nn import functional as F
 
@@ -25,6 +26,7 @@ class RealGANModel(SRGANModel):
         self.jpeger = DiffJPEG(differentiable=False).cuda()  # simulate JPEG compression artifacts
         self.usm_sharpener = USMSharp().cuda()  # do usm sharpening
         self.queue_size = opt.get('queue_size', 180)
+        
 
     @torch.no_grad()
     def _dequeue_and_enqueue(self):
@@ -79,8 +81,6 @@ class RealGANModel(SRGANModel):
             ori_h, ori_w = self.gt.size()[2:4]
 
             # ----------------------- The first degradation process ----------------------- #
-            # blur
-            out = filter2D(self.gt_usm, self.kernel1)
             # random resize
             updown_type = random.choices(['up', 'down', 'keep'], self.opt['resize_prob'])[0]
             if updown_type == 'up':
@@ -90,7 +90,11 @@ class RealGANModel(SRGANModel):
             else:
                 scale = 1
             mode = random.choice(['area', 'bilinear', 'bicubic', 'nearest']) #random.choice(['area', 'bilinear', 'bicubic'])
-            out = F.interpolate(out, scale_factor=scale, mode=mode)
+            out = F.interpolate(self.gt, scale_factor=scale, mode=mode)
+
+            # add blur
+            out = filter2D(out, self.kernel1)
+
             # add noise
             gray_noise_prob = self.opt['gray_noise_prob']
             if np.random.uniform() < self.opt['gaussian_noise_prob']:
@@ -103,6 +107,8 @@ class RealGANModel(SRGANModel):
                     gray_prob=gray_noise_prob,
                     clip=True,
                     rounds=False)
+
+
             # JPEG compression
             jpeg_p = out.new_zeros(out.size(0)).uniform_(*self.opt['jpeg_range'])
             out = torch.clamp(out, 0, 1)  # clamp to [0, 1], otherwise JPEGer will result in unpleasant artifacts
@@ -112,6 +118,7 @@ class RealGANModel(SRGANModel):
             # blur
             if np.random.uniform() < self.opt['second_blur_prob']:
                 out = filter2D(out, self.kernel2)
+
             # random resize
             updown_type = random.choices(['up', 'down', 'keep'], self.opt['resize_prob2'])[0]
             if updown_type == 'up':
@@ -123,6 +130,7 @@ class RealGANModel(SRGANModel):
             mode = random.choice(['area', 'bilinear', 'bicubic', 'nearest']) #random.choice(['area', 'bilinear', 'bicubic'])
             out = F.interpolate(
                 out, size=(int(ori_h / self.opt['scale'] * scale), int(ori_w / self.opt['scale'] * scale)), mode=mode)
+
             # add noise
             gray_noise_prob = self.opt['gray_noise_prob2']
             if np.random.uniform() < self.opt['gaussian_noise_prob2']:
@@ -193,6 +201,7 @@ class RealGANModel(SRGANModel):
         l1_gt = self.gt_usm
         percep_gt = self.gt_usm
         gan_gt = self.gt_usm
+
         if self.opt['l1_gt_usm'] is False:
             l1_gt = self.gt
         if self.opt['percep_gt_usm'] is False:
@@ -206,6 +215,7 @@ class RealGANModel(SRGANModel):
 
         self.optimizer_g.zero_grad()
         self.output = self.net_g(self.lq)
+        self.output_ema = self.net_g_ema(self.lq)
 
         l_g_total = 0
         loss_dict = OrderedDict()
@@ -215,6 +225,13 @@ class RealGANModel(SRGANModel):
                 l_g_pix = self.cri_pix(self.output, l1_gt)
                 l_g_total += l_g_pix
                 loss_dict['l_g_pix'] = l_g_pix
+
+            if self.cri_artifacts:
+                pixel_weight = get_refined_artifact_map(self.gt, self.output, self.output_ema, 7)
+                l_g_artifacts = self.cri_artifacts(torch.mul(pixel_weight, self.output), torch.mul(pixel_weight, self.gt))
+                l_g_total += l_g_artifacts
+                loss_dict['l_g_artifacts'] = l_g_artifacts
+
             # perceptual loss
             if self.cri_perceptual:
                 l_g_percep, l_g_style = self.cri_perceptual(self.output, percep_gt)
@@ -224,6 +241,12 @@ class RealGANModel(SRGANModel):
                 if l_g_style is not None:
                     l_g_total += l_g_style
                     loss_dict['l_g_style'] = l_g_style
+            
+            if self.cri_lpips:
+                l_g_lpips = self.cri_lpips(self.output, percep_gt)
+                l_g_total += l_g_lpips
+                loss_dict['l_g_lpips'] = l_g_lpips
+
             # gan loss
             fake_g_pred = self.net_d(self.output)
             l_g_gan = self.cri_gan(fake_g_pred, True, is_disc=False)
