@@ -1,4 +1,4 @@
-## 📖 Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolution
+### 📖 Spatially-Adaptive Feature Modulation for Efficient Image Super-Resolution
 > <a href="https://colab.research.google.com/drive/19DdsNFeOYR8om8QCCi9WWzr_WkWTLHZd?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>
 [![OpenXLab](https://img.shields.io/badge/Demo-%F0%9F%90%BC%20OpenXLab-blue)](https://openxlab.org.cn/apps/detail/Melokyyy/SAFMN)
 [![Hugging Face Demo](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demos-blue)](https://huggingface.co/spaces/Meloo/SAFMN)
