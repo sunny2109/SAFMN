@@ -22,6 +22,7 @@
 *An overview of the proposed SAFMN. SAFMN first transforms the input LR image into the feature space using a convolutional layer, performs feature extraction using a series of feature mixing modules (FMMs), and then reconstructs these extracted features by an upsampler module. The FMM block is mainly implemented by a spatially-adaptive feature modulation (SAFM) layer and a convolutional channel mixer (CCM).*
 
 ## 🚩 News
+- [2025-12-23] Add the [Real_SAFMN++](https://github.com/sunny2109/SAFMN/tree/main/AIM2025_EPSR), which is the **1st** place winner of the [AIM 2025 Efficient Perceptual Super-Resolution Challenge](https://arxiv.org/pdf/2510.12765v1). 
 - [2024-07-16] Add 🤗[HuggingFace](https://huggingface.co/spaces/Meloo/SAFMN) online demo! 
 - [2024-05-08] Add the [light_SAFMN++](https://github.com/sunny2109/SAFMN/tree/main/AIS2024-RTSR), which is the **1st** place winner of the fidelity track of the [Real-time 4K Super Resolution Challenge for compressed AVIF images](https://arxiv.org/pdf/2404.16484v1), and is invited to give an **[oral](https://drive.google.com/drive/folders/1N6Lts1n0czO_nwYww1LiGaVmwCf-OrAl?usp=sharing)** presentation at the [AIS2024](https://ai4streaming-workshop.github.io/) workshop. 
 - [2024-03-27] Add the improved ESR model [SAFMN++](https://github.com/sunny2109/SAFMN/tree/main/NTIRE2024_ESR), which ranks Top4 in the Overall Performance track and Runtime track of NTIRE2024 [ESR](https://arxiv.org/pdf/2404.10343v1) challenge
